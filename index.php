@@ -1,20 +1,17 @@
 <?php
-
-$todos = [];
-$file = file_get_contents('todo.txt');
-$todos = unserialize($file);
-
-//fungsi untuk melihat apakah data sudah ada update, ketika ada maka dia akan membaca data terbaru (tanpa hapus)
-
-if(isset($POST['todo'])){
-    $data = $POST['todo']
-    $todos[] = [
-        'todo' => $data
-        'status' => 0
-    ];
-    file_put_contents('todo.txt'.serialize($todos));
+//total array yang disiapkan untuk disimpan
+$todos	= []; 
+//Jika ditemukan todo yang dikirim melalui methode POST
+if(isset($_POST['todo']))
+{
+    $data	= $_POST['todo']; // mengambil data yang diinput pada form
+    $todos[]=[
+                'todo'	=> $data,
+                'status'=>0
+    		  ];
+	$daftar_belanja=serialize($todos);//simpan daftar belanja dalam format serialized
+    file_put_contents('todo.txt',$daftar_belanja);
 }
-
 ?>
 
 <h1>TODO LIST HARI INI</h1>
