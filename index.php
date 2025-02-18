@@ -1,7 +1,10 @@
 <?php
+
 //total array yang disiapkan untuk disimpan
 $todos	= []; 
+
 //Jika ditemukan todo yang dikirim melalui methode POST
+
 if(isset($_POST['todo']))
 {
     $data	= $_POST['todo']; // mengambil data yang diinput pada form
