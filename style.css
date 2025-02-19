@@ -38,11 +38,15 @@ button:hover {
 ul {
     list-style-type: none;
     padding: 0;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
 
 li {
-    background-color: white;
+    background-color: rgba(235, 231, 231, 0.799);
+    padding-top: 10px;
     padding: 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;

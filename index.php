@@ -98,8 +98,6 @@ $filtered_todos = array_values(array_filter($todos, function($todo) use ($filter
     return true;
 }));
 
-
-
 // Pagination
 $per_page = 10; 
 $total_todos = count($filtered_todos);
@@ -190,6 +188,10 @@ $paginated_todos = array_slice($filtered_todos, $offset, $per_page);
         <?php endfor; ?>
     <?php endif; ?>
 </div>
+
+<footer style="text-align: center; padding: 10px;">
+    <a href="catatan.html" style="text-decoration: none; font-weight: bold;">📜 Lihat Catatan</a>
+</footer>
 
 </body>
 </html>
